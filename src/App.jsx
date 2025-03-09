@@ -12,9 +12,9 @@ const App = () => {
   const sortByDate = () => {
     const sortedData = [...data].sort((a, b) => {
       if (a.date !== b.date) {
-        return new Date(b.date) - new Date(a.date); // Sort by latest date first
+        return new Date(b.date) - new Date(a.date); 
       }
-      return b.views - a.views; // If dates are same, sort by views (highest first)
+      return b.views - a.views; 
     });
     setData(sortedData);
   };
@@ -22,9 +22,9 @@ const App = () => {
   const sortByViews = () => {
     const sortedData = [...data].sort((a, b) => {
       if (a.views !== b.views) {
-        return b.views - a.views; // Sort by highest views first
+        return b.views - a.views; 
       }
-      return new Date(b.date) - new Date(a.date); // If views are same, sort by latest date first
+      return new Date(b.date) - new Date(a.date); 
     });
     setData(sortedData);
   };
